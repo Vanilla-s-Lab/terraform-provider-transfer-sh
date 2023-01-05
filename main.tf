@@ -9,4 +9,5 @@ terraform {
 provider "transfer-sh" {}
 
 resource "transfer-sh_file" "test" {
+    file_path = "./hello.txt"
 }
