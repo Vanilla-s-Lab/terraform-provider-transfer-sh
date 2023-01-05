@@ -8,6 +8,16 @@ terraform {
 
 provider "transfer-sh" {}
 
-resource "transfer-sh_file" "test" {
-    file_path = "./hello.txt"
+resource "transfer-sh_file" "hello" {
+  file_path = "./hello.txt"
+}
+
+output "file_hash" {
+  // noinspection HILUnresolvedReference
+  value = transfer-sh_file.hello.file_hash
+}
+
+output "link" {
+  // noinspection HILUnresolvedReference
+  value = transfer-sh_file.hello.link
 }
