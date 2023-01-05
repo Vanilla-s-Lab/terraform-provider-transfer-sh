@@ -16,7 +16,7 @@ func New() provider.Provider {
 type transferProvider struct{}
 
 func (t transferProvider) Metadata(_ context.Context, _ provider.MetadataRequest, resp *provider.MetadataResponse) {
-	resp.TypeName = "transfer"
+	resp.TypeName = "transfer-sh"
 }
 
 func (t transferProvider) Schema(_ context.Context, _ provider.SchemaRequest, resp *provider.SchemaResponse) {
