@@ -13,6 +13,10 @@ func New() provider.Provider {
 	return &transferProvider{}
 }
 
+var (
+	_ provider.Provider = &transferProvider{}
+)
+
 type transferProvider struct{}
 
 func (t transferProvider) Metadata(_ context.Context, _ provider.MetadataRequest, resp *provider.MetadataResponse) {

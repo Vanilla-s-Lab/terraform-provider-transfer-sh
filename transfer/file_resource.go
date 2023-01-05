@@ -7,6 +7,10 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema"
 )
 
+var (
+	_ resource.Resource = &fileResource{}
+)
+
 func NewFileResource() resource.Resource {
 	return &fileResource{}
 }
