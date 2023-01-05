@@ -31,5 +31,7 @@ func (t transferProvider) DataSources(context.Context) []func() datasource.DataS
 }
 
 func (t transferProvider) Resources(context.Context) []func() resource.Resource {
-	return nil
+	return []func() resource.Resource{
+		NewFileResource,
+	}
 }
